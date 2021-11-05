@@ -25,10 +25,14 @@ class UserAdmin(BaseUserAdmin):
         }),
     )
 
-    # fieldsets = (
-    #     (None, {'fields': ('email', 'password', 'name', 'is_staff', 'is_superuser',
-    #                        'is_active', 'last_login')}),
-    # )
+    fieldsets = (
+        (None, {
+            'fields':
+                ('email', 'password', 'name', 'is_staff',
+                 'is_superuser', 'is_active', 'last_login')
+        }
+         ),
+    )
 
 
 admin.site.register(models.User, UserAdmin)
